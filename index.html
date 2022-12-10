@@ -16,12 +16,12 @@
 </head>
 <body>
     <div class="container">
-
+     <div class="weather-app-wrapper">
         <div class="weather-app">
         
-        <form class="search-form" id="search-form">
+        <form class="search-form" id="search-form" class="mb-3">
             <div class="row">
-                <div class="col-6">
+                <div class="col-9">
                 <input 
                 type="search"
                  placeholder="Enter a city"  
@@ -36,51 +36,51 @@
                 value="search"
                 class="form-control btn btn-outline-danger"/>
                 </div>
-                <div class="col-3">
-                  <button
-                    class="btn btn-success w-100"
-                    id="current-button"
-                  >
-                    Current
-                  </button>
-                </div>
-
+               
         </div>
         </form>
-        <h1 id="searched-city"></h1>
-        <br/>
-        <h2 id="today"></h2>
+        <div class="overview">
+          <h1 id="searched-city"></h1>
+          <ul>
+            <li>Last updated : <span id="today"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
+      
         <div class="row">
         <div class="col-6">
-                <div class="current-temp-num">
-                    <img src="" alt="sunny-cloudy" class="weather-icon"id="icon">
-                      <div class="float-left">
-                        <strong id="temperature"class="temperature"></strong
+                <div class="clearfix weather-temperature">
+                  <img src="" alt="clear" class="weather-icon"id="icon" class="float-left">
+                    <strong id="temperature"class="temperature"></strong>
                         <span class="units"
                     ><a href="#" class="weather-link" id="celsius-link" class="active">°C</a> |
-                    <a href="#" class="weather-link" id="fahrenheit-link">°F</a></span
-                  >
+                    <a href="#" class="weather-link" id="fahrenheit-link">°F</a></span>
+              </div>
+           </div>
+                      <div class="col-6">
+                        <ul>
+                            <li>Humidity :<span id="humidity"></span></li>
+                            <li>Wind :<span id="wind"></span>km/h</li>
+                        </ul>
                       </div>
-                    <h3 id="description"></h3>
-                    <ul>
-                        <li>Humidity :<span id="humidity"></span></li>
-                        <li>Wind :<span id="wind"></span>km/h</li>
-                    </ul>
-                  </div>
+                  
          </div>
+         <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
           <a
-            href=""
+            href="https://github.com/ensieh-tahani/Vanilla-Weather-Search-Homework.git"
             target="_blank"
             >Open-source code</a
           >
           by Ensieh Tahani
         </small>
+        </div>
+      
   </div>
   
-</div>
-</div>
+
+
     <script src="src/index.js"></script>
 </body>
 </html>
